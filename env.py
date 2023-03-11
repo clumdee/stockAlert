@@ -7,5 +7,5 @@ if os.path.exists("../.env"):
     load_dotenv(override=True)
 
 # Line target
-CHANNEL_ACCESS_TOKEN = os.getenv("CHANNEL_ACCESS_TOKEN")
-TO_UID = os.getenv("TO_UID")
+LINE_TOKEN = os.getenv("LINE_TOKEN")
+LINE_USERS = [u for u in os.getenv("LINE_USERS").split(",")]
