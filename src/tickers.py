@@ -9,5 +9,7 @@ tickers = {
     "Vietnam": ("VNM", "rsi"),
     "Thailand": ("^SET.BK", "rsi"),
     "CyberSecETF": ("CIBR", "rsi"),
+    "Gold": ("GC=F", "price"),
+    "BRENT-Oil": ("BZ=F", "price"),
     "THB/USD": ("THB=X", "price"),
 }

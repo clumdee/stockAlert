@@ -55,7 +55,6 @@ def get_rsi(s, window=14):
     l = c.clip(upper=0).abs()
 
     # smoothen gain and loss
-    w = 14
     g_smma = g.ewm(
         alpha=1.0 / window, min_periods=0, adjust=True, ignore_na=False
     ).mean()
