@@ -5,6 +5,7 @@ tickers = {
     "Japan": ("1306.T", "rsi"),
     "CSI300": ("3188.HK", "rsi"),
     "HangSeng": ("^HSI", "rsi"),
+    "HS-TECH": ("3033.HK", "rsi"),
     "CQQQ": ("CQQQ", "rsi"),
     "Vietnam": ("VNM", "rsi"),
     "Thailand": ("^SET.BK", "rsi"),
