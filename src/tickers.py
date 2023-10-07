@@ -1,4 +1,5 @@
 tickers = {
+    "World": ("XWD.TO", "rsi"),
     "SP500": ("^GSPC", "rsi"),
     "Nasdaq": ("^IXIC", "rsi"),
     "EURO600": ("EXSA.DE", "rsi"),
@@ -11,6 +12,8 @@ tickers = {
     "Thailand": ("^SET.BK", "rsi"),
     "CyberSecETF": ("CIBR", "rsi"),
     "Gold": ("GC=F", "price"),
-    "BRENT-Oil": ("BZ=F", "price"),
+    "Gold": ("GC=F", "rsi"),
     "THB/USD": ("THB=X", "price"),
+    "THB/USD": ("THB=X", "rsi"),
+    "BRENT-Oil": ("BZ=F", "price"),
 }
