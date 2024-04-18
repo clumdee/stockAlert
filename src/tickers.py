@@ -10,10 +10,11 @@ tickers = {
     "CQQQ": ("CQQQ", "rsi"),
     "Vietnam": ("VNM", "rsi"),
     "Thailand": ("^SET.BK", "rsi"),
+    "Russell2000": ("IWM", "rsi"),
     "CyberSecETF": ("CIBR", "rsi"),
     "Gold": ("GC=F", "price"),
-    "Gold": ("GC=F", "rsi"),
+    "Gold_RSI": ("GC=F", "rsi"),
     "THB/USD": ("THB=X", "price"),
-    "THB/USD": ("THB=X", "rsi"),
+    "THB/USD_RSI": ("THB=X", "rsi"),
     "BRENT-Oil": ("BZ=F", "price"),
 }
