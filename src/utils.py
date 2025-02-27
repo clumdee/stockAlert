@@ -26,7 +26,7 @@ def get_stock_info(ticker="^IXIC", info="rsi"):
     s = stck.history(period="120d", interval="1d")["Close"]
 
     dt = s.index[-1].strftime("%Y-%m-%d")
-    price = f"{s[-1]:.2f}"
+    price = f"{s.iloc[-1]:.2f}"
     rsi = get_rsi(s, window=14)
 
     return (dt, price) if info == "price" else (dt, rsi)
@@ -65,6 +65,6 @@ def get_rsi(s, window=14):
     # calculate RSI
     rs = g_smma / l_smma
     rsi = 100 - 100 / (1 + rs)
-    rsi = f"{rsi[-1]:.2f}"
+    rsi = f"{rsi.iloc[-1]:.2f}"
 
     return rsi

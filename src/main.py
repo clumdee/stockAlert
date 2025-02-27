@@ -1,7 +1,7 @@
 import datetime
 
-from linebot import LineBotApi
-from linebot.models import TextSendMessage
+from linebot.v3.messaging import ApiClient, Configuration, MessagingApi, TextMessage
+from linebot.v3.messaging.models.push_message_request import PushMessageRequest
 
 import add_path
 from env import LINE_TOKEN, LINE_USERS
@@ -19,8 +19,11 @@ def main():
         summary = "\n".join([summary, s])
 
     # send Line message
-    line_bot_api = LineBotApi(LINE_TOKEN)
-    line_text = TextSendMessage(
+    configuration = Configuration(access_token = LINE_TOKEN)
+    api_client = ApiClient(configuration) 
+    line_bot_api = MessagingApi(api_client)
+    
+    line_text = TextMessage(
         text=summary,
         emojis=[
             {"index": 0, "productId": "5ac21542031a6752fb806d55", "emojiId": "180"},
@@ -28,7 +31,7 @@ def main():
         ],
     )
     for u in LINE_USERS:
-        line_bot_api.push_message(u, line_text)
+        line_bot_api.push_message(PushMessageRequest(to=u, messages=[line_text]))
 
 
 if __name__ == "__main__":
