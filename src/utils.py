@@ -1,4 +1,5 @@
 import yfinance as yf
+from curl_cffi import requests
 
 
 def get_stock_info(ticker="^IXIC", info="rsi"):
@@ -20,7 +21,8 @@ def get_stock_info(ticker="^IXIC", info="rsi"):
     """
 
     # init object
-    stck = yf.Ticker(ticker)
+    session = requests.Session(impersonate="chrome")
+    stck = yf.Ticker(ticker, session=session)
 
     # get historical close price
     s = stck.history(period="120d", interval="1d")["Close"]

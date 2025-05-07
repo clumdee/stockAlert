@@ -6,6 +6,7 @@ authors = [{ name = "Your Name", email = "you@example.com" }]
 requires-python = "~=3.9"
 readme = "README.md"
 dependencies = [
+    "curl-cffi>=0.10.0",
     "line-bot-sdk>=3.16.0",
     "numpy>=2.0.2",
     "pandas>=2.2.3",
