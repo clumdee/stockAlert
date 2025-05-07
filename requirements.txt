@@ -9,7 +9,9 @@ async-timeout==5.0.1 ; python_full_version < '3.11'
 attrs==25.1.0
 beautifulsoup4==4.13.3
 certifi==2025.1.31
+cffi==1.17.1
 charset-normalizer==3.4.1
+curl-cffi==0.10.0
 deprecated==1.2.18
 frozendict==2.4.6
 frozenlist==1.5.0
@@ -24,6 +26,7 @@ pandas==2.2.3
 peewee==3.17.9
 platformdirs==4.3.6
 propcache==0.3.0
+pycparser==2.22
 pydantic==2.10.6
 pydantic-core==2.27.2
 python-dateutil==2.9.0.post0
